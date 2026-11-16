@@ -1,0 +1,271 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: #07130c;
+    font-family: Arial, sans-serif;
+    color: white;
+    user-select: none;
+    touch-action: none;
+}
+
+canvas {
+    position: fixed;
+    inset: 0;
+    display: block;
+    z-index: 0;
+}
+
+#game-ui {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    display: none;
+}
+
+.top-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    background: linear-gradient(#0009, transparent);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+}
+
+.stats div {
+    background: #101e19cc;
+    padding: 12px 17px;
+    border: 1px solid #ffffff35;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.mission {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    padding: 15px 20px;
+    background: #10271dcc;
+    border: 1px solid #5ca87b;
+    border-radius: 12px;
+}
+
+.mission b {
+    color: #75e69a;
+}
+
+.mission p {
+    margin-top: 7px;
+    font-size: 14px;
+}
+
+.bottom-panel {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0009;
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+#message {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #9dffbc;
+    text-shadow: 0 2px 8px black;
+}
+
+#start-screen, #end-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#03120acc, #071a12ee),
+                radial-gradient(circle, #24583a, #06100b);
+}
+
+.start-box {
+    text-align: center;
+    padding: 40px;
+    background: #10251bdc;
+    border: 1px solid #76d99a;
+    border-radius: 25px;
+    box-shadow: 0 0 50px #1b7045;
+    width: min(90%, 420px);
+}
+
+.start-box h1 {
+    font-size: 38px;
+    color: #83f5a9;
+}
+
+.start-box h2 {
+    margin: 15px;
+    letter-spacing: 5px;
+}
+
+.start-box p {
+    margin: 20px 0;
+    color: #c3d8c9;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+#startButton, #restartButton {
+    padding: 16px 25px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #159447, #38c96d);
+    font-size: 15px;
+    box-shadow: 0 5px 20px #15944788;
+}
+
+#startButton:hover, #restartButton:hover {
+    transform: scale(1.05);
+}
+
+.small {
+    font-size: 12px;
+}
+
+#end-screen {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    background: #000d;
+}
+
+#end-screen h1 {
+    color: #ff7777;
+}
+
+#mobile-controls {
+    position: fixed;
+    z-index: 3;
+    bottom: 25px;
+    left: 20px;
+    right: 20px;
+    display: none;
+    justify-content: space-between;
+    align-items: end;
+    pointer-events: none;
+}
+
+.joystick, .mobile-actions {
+    pointer-events: auto;
+}
+
+.joystick button, .mobile-actions button {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background: #183c2bcc;
+    border: 2px solid #9bffba;
+    font-size: 19px;
+    touch-action: none;
+}
+
+.middle {
+    display: flex;
+    gap: 5px;
+}
+
+#up {
+    display: block;
+    margin: 0 auto 5px;
+}
+
+.mobile-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.mobile-actions button {
+    width: 65px;
+    height: 65px;
+    font-size: 13px;
+}
+
+#jump {
+    background: #1768a8dd;
+}
+
+#run {
+    background: #a76a12dd;
+}
+
+@media (max-width: 700px) {
+    .logo {
+        font-size: 15px;
+    }
+
+    .top-panel {
+        padding: 12px;
+    }
+
+    .stats {
+        gap: 5px;
+    }
+
+    .stats div {
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .mission {
+        top: 75px;
+        left: 10px;
+        padding: 10px;
+    }
+
+    .mission p {
+        font-size: 11px;
+    }
+
+    .bottom-panel {
+        display: none;
+    }
+
+    #mobile-controls {
+        display: flex;
+    }
+
+    .start-box {
+        padding: 25px;
+    }
+
+    .start-box h1 {
+        font-size: 29px;
+    }
+}

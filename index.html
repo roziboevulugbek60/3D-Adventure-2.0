@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D SURVIVAL - LOST FOREST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loading">
+        <h1>🌲 LOST FOREST</h1>
+        <p>O‘yin yuklanmoqda...</p>
+    </div>
+
+    <div id="game-ui">
+        <div class="top-panel">
+            <div class="logo">🌲 SURVIVAL</div>
+            <div class="stats">
+                <div>❤️ <span id="health">100</span></div>
+                <div>💎 <span id="crystals">0</span></div>
+                <div>🔑 <span id="keys">0</span></div>
+            </div>
+        </div>
+
+        <div class="mission">
+            <b>VAZIFA</b>
+            <p id="missionText">O‘rmondan kristallarni top!</p>
+        </div>
+
+        <div id="message"></div>
+
+        <div class="bottom-panel">
+            <span>W A S D — Yurish</span>
+            <span>SPACE — Sakrash</span>
+            <span>SHIFT — Yugurish</span>
+        </div>
+    </div>
+
+    <div id="mobile-controls">
+        <div class="joystick">
+            <button id="up">▲</button>
+            <div class="middle">
+                <button id="left">◀</button>
+                <button id="down">▼</button>
+                <button id="right">▶</button>
+            </div>
+        </div>
+
+        <div class="mobile-actions">
+            <button id="jump">JUMP</button>
+            <button id="run">RUN</button>
+        </div>
+    </div>
+
+    <div id="start-screen">
+        <div class="start-box">
+            <h1>🌲 LOST FOREST</h1>
+            <h2>3D SURVIVAL</h2>
+            <p>Sirli o‘rmondan omon chiq!</p>
+            <button id="startButton">O‘YINNI BOSHLASH</button>
+            <p class="small">Kompyuter va telefon uchun</p>
+        </div>
+    </div>
+
+    <div id="end-screen">
+        <h1 id="endTitle">O‘YIN TUGADI</h1>
+        <p id="endDescription"></p>
+        <button id="restartButton">QAYTA BOSHLASH</button>
+    </div>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
